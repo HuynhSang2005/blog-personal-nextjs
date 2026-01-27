@@ -1,0 +1,10 @@
+{
+  "name": "@blog/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "main": "base.json",
+  "types": "base.json",
+  "exports": {
+    ".": "./base.json"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@blog/config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "biome.json",
+  "types": "biome.d.ts",
+  "exports": {
+    ".": "./biome.json"
+  }
+}

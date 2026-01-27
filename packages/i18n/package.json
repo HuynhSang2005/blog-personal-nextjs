@@ -1,0 +1,18 @@
+{
+  "name": "@blog/i18n",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./middleware": "./src/middleware.ts"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.5.4",
+    "negotiator": "^0.6.3",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/negotiator": "^0.6.3",
+    "next": "16.1.5"
+  }
+}

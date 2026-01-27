@@ -1,0 +1,35 @@
+{
+  "common": {
+    "home": "Trang chủ",
+    "about": "Về tôi",
+    "blog": "Blog",
+    "contact": "Liên hệ",
+    "search": "Tìm kiếm",
+    "loading": "Đang tải...",
+    "readMore": "Đọc tiếp",
+    "publishedOn": "Đăng ngày"
+  },
+  "home": {
+    "title": "Chào mừng đến với blog của tôi",
+    "subtitle": "Chia sẻ suy nghĩ về công nghệ, phát triển, và nhiều hơn nữa",
+    "latestPosts": "Bài viết mới nhất",
+    "featured": "Nổi bật"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Đọc các bài viết mới nhất",
+    "noPosts": "Không tìm thấy bài viết nào"
+  },
+  "about": {
+    "title": "Về tôi",
+    "description": "Tìm hiểu thêm về tôi"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "description": "Liên hệ với tôi"
+  },
+  "seo": {
+    "siteName": "Blog của tôi",
+    "ogImage": "/og-image.png"
+  }
+}

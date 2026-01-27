@@ -1,0 +1,35 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "search": "Search",
+    "loading": "Loading...",
+    "readMore": "Read more",
+    "publishedOn": "Published on"
+  },
+  "home": {
+    "title": "Welcome to my blog",
+    "subtitle": "Sharing thoughts on technology, development, and more",
+    "latestPosts": "Latest Posts",
+    "featured": "Featured"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Read my latest articles",
+    "noPosts": "No posts found"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Learn more about me"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Get in touch"
+  },
+  "seo": {
+    "siteName": "My Blog",
+    "ogImage": "/og-image.png"
+  }
+}
