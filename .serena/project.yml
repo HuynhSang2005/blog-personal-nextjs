@@ -1,0 +1,74 @@
+# Serena Project Configuration for Next.js 16
+# Generated for blog-personal-nextjs project
+
+# Project metadata
+project:
+  name: "blog-personal-nextjs"
+  type: "nextjs"
+  version: "16.1.5"
+  framework: "Next.js 16 with App Router"
+
+# Context settings
+context:
+  mode: "claude-code"
+  read_only: false
+
+# Build and development commands
+build:
+  command: "bun run build"
+  dev_command: "bun run dev"
+  typecheck: "bun run lint"
+  format: "bun run format"
+
+# File patterns to include/exclude
+files:
+  include:
+    - "src/**/*.{ts,tsx,js,jsx}"
+    - "app/**/*.{ts,tsx,js,jsx}"
+    - "components/**/*.{ts,tsx,js,jsx}"
+    - "lib/**/*.{ts,tsx,js,jsx}"
+    - "hooks/**/*.{ts,tsx,js,jsx}"
+    - "*.config.{ts,js,mjs}"
+    - "*.json"
+    - "**/*.md"
+    - "**/*.mdx"
+  exclude:
+    - ".next/**"
+    - "node_modules/**"
+    - ".git/**"
+    - "*.log"
+    - "dist/**"
+    - "build/**"
+    - ".serena/memories/**"
+
+# Language Server settings for Next.js/TypeScript
+ls_specific_settings:
+  typescript:
+    enabled: true
+    strict_mode: true
+    include_inlay_hints: true
+  tailwindcss:
+    enabled: true
+    content_paths:
+      - "src/**/*.{js,ts,jsx,tsx}"
+      - "app/**/*.{js,ts,jsx,tsx}"
+
+# Excluded tools (customize based on security needs)
+# Tip: Uncomment tools you want to disable
+# excluded_tools: []
+#   - execute_shell_command
+#   - create_file
+#   - replace_string_in_file
+#   - insert_edit_into_file
+
+# Memory and context settings
+memory:
+  enabled: true
+  persist_context: true
+
+# Next.js specific settings
+nextjs:
+  app_router: true
+  src_directory: true
+  typescript: true
+  tailwindcss: true
