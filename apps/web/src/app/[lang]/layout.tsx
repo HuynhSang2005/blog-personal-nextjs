@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { i18nConfig, type Locale } from "@blog/i18n";
 import "./globals.css";
+import { QueryProvider } from "@/lib/providers/query-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +42,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <QueryProvider>
+          {children}
+        </QueryProvider>
+      </body>
     </html>
   );
 }
