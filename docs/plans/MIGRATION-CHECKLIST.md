@@ -6,39 +6,44 @@
 
 ## Pre-Migration Checklist
 
-- [ ] Read all plan documents in `docs/plans/`
-- [ ] Understand the current project structure
-- [ ] Ensure clean git state before starting
-- [ ] Create a backup branch: `git checkout -b backup/pre-migration`
+- [x] Read all plan documents in `docs/plans/`
+- [x] Understand the current project structure
+- [x] Ensure clean git state before starting
+- [x] Create a backup branch: `git checkout -b backup/pre-migration`
 
 ---
 
-## Phase 1: Dependencies (Est: 10 min)
+## Phase 1: Dependencies (Est: 10 min) ✅ COMPLETED
 
 **File: [2026-01-30-phase1-dependencies.md](./2026-01-30-phase1-dependencies.md)**
 
 ### Content Processing
-- [ ] `bun add @content-collections/core`
-- [ ] `bun add @content-collections/mdx`
-- [ ] `bun add @content-collections/next`
-- [ ] `bun add rehype-pretty-code`
-- [ ] `bun add rehype-autolink-headings`
-- [ ] `bun add rehype-slug`
-- [ ] `bun add remark-gfm`
-- [ ] `bun add remark-code-import`
-- [ ] `bun add unist-util-visit`
-- [ ] `bun add shiki`
-- [ ] `bun add -D @types/mdx`
+- [x] `bun add @content-collections/core` → v0.13.1
+- [x] `bun add @content-collections/mdx` → v0.2.2
+- [x] `bun add @content-collections/next` → v0.2.10
+- [x] `bun add rehype-pretty-code` → v0.14.1
+- [x] `bun add rehype-autolink-headings` → v7.1.0
+- [x] `bun add rehype-slug` → v6.0.0
+- [x] `bun add remark-gfm` → v4.0.1
+- [x] `bun add remark-code-import` → v1.2.0
+- [x] `bun add unist-util-visit` → v5.1.0
+- [x] `bun add shiki` → v3.21.0
+- [x] `bun add -D @types/mdx` → v2.0.13
 
 ### i18n
-- [ ] `bun add next-intl`
+- [x] `bun add next-intl` → v4.7.0
 
 ### Theming
-- [ ] `bun add next-themes`
+- [x] `bun add next-themes` → v0.4.6
+
+### UI Components (Additional)
+- [x] `bun add @radix-ui/*` → Radix UI primitives for shadcn/ui
+- [x] `bun add cmdk` → v1.1.1 (Command palette)
+- [x] `bun add vaul` → v1.1.2 (Drawer)
 
 ### Verification
-- [ ] Run `bun install` from root - no errors
-- [ ] Commit: `git commit -m "feat(web): add all required dependencies"`
+- [x] Run `bun install` from root - no errors (495 packages)
+- [x] Commit: `git commit -m "feat(web): add all required dependencies for migration (Phase 1)"`
 
 ---
 

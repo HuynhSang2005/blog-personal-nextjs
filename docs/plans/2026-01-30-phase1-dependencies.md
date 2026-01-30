@@ -130,20 +130,20 @@ git commit -m "chore: verify all dependencies installed correctly"
 
 ## Checklist
 
-- [ ] @content-collections/core installed
-- [ ] @content-collections/mdx installed
-- [ ] @content-collections/next installed
-- [ ] rehype-pretty-code installed
-- [ ] rehype-autolink-headings installed
-- [ ] rehype-slug installed
-- [ ] remark-gfm installed
-- [ ] remark-code-import installed
-- [ ] unist-util-visit installed
-- [ ] shiki installed
-- [ ] next-intl installed
-- [ ] next-themes installed
-- [ ] @types/mdx installed (devDependency)
-- [ ] All dependencies work with bun install (no conflicts)
+- [x] @content-collections/core installed → v0.13.1
+- [x] @content-collections/mdx installed → v0.2.2
+- [x] @content-collections/next installed → v0.2.10
+- [x] rehype-pretty-code installed → v0.14.1
+- [x] rehype-autolink-headings installed → v7.1.0
+- [x] rehype-slug installed → v6.0.0
+- [x] remark-gfm installed → v4.0.1
+- [x] remark-code-import installed → v1.2.0
+- [x] unist-util-visit installed → v5.1.0
+- [x] shiki installed → v3.21.0
+- [x] next-intl installed → v4.7.0
+- [x] next-themes installed → v0.4.6
+- [x] @types/mdx installed (devDependency) → v2.0.13
+- [x] All dependencies work with bun install (no conflicts) → 495 packages
 
 ---
 
