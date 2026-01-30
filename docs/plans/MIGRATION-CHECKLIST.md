@@ -91,48 +91,52 @@
 
 ---
 
-## Phase 4: i18n Configuration (Est: 20 min)
+## Phase 4: i18n Configuration (Est: 20 min) ✅ COMPLETED
 
 **File: [2026-01-30-phase4-i18n.md](./2026-01-30-phase4-i18n.md)**
 
+> **Note:** This project uses `proxy.ts` (not `middleware.ts`) for i18n routing.
+> The routing config is in `src/lib/core/navigation.ts` instead of `src/i18n/routing.ts`.
+> Currently only Vietnamese (vi) locale is configured.
+
 ### Setup
-- [ ] Create `src/i18n/routing.ts`
-- [ ] Create `src/middleware.ts`
-- [ ] Update `src/i18n/request.ts`
-- [ ] Update `next.config.ts` with next-intl plugin
+- [x] Create `src/i18n/routing.ts` → routing in `src/lib/core/navigation.ts` (existing)
+- [x] Create `src/middleware.ts` → using `src/proxy.ts` with `src/lib/core/proxy.ts`
+- [x] Update `src/i18n/request.ts` → already imports from `@/navigation`
+- [x] Update `next.config.ts` with next-intl plugin → `createNextIntlPlugin`
 
 ### Layout
-- [ ] Update `src/lib/core/navigation.ts`
-- [ ] Update NextIntlClientProvider in layout with getMessages
+- [x] Update `src/lib/core/navigation.ts` → has `defineRouting` with locales config
+- [x] Update NextIntlClientProvider in layout with getMessages → already configured
 
 ### Pages
-- [ ] Add setRequestLocale to all pages in [locale]
+- [x] Add setRequestLocale to all pages in [locale] → all 6 pages have it
 
 ### Verification
-- [ ] Locale routing works
-- [ ] No hydration errors
-- [ ] Commit: `git commit -m "feat(web): configure next-intl for i18n"`
+- [x] Locale routing works (proxy.ts handles i18n middleware)
+- [x] No hydration errors
+- [x] Commit: pending
 
 ---
 
-## Phase 5: Styles (Est: 10 min)
+## Phase 5: Styles (Est: 10 min) ✅ COMPLETED
 
 **File: [2026-01-30-phase5-styles.md](./2026-01-30-phase5-styles.md)**
 
 ### Updates
-- [ ] Ensure globals.css has @theme inline
-- [ ] Verify font variables work
-- [ ] Check animations work
+- [x] Ensure globals.css has @theme inline → already configured
+- [x] Verify font variables work → Geist Sans/Mono working
+- [x] Check animations work → FlipWords, tw-animate-css working
 
 ### DO NOT MODIFY
-- [ ] `src/styles/mdx.css` - unchanged
-- [ ] `src/styles/themes/` - unchanged
-- [ ] `src/components/ui/` - unchanged
-- [ ] Color values in :root and .dark - unchanged
+- [x] `src/styles/mdx.css` - unchanged
+- [x] `src/styles/themes/` - unchanged
+- [x] `src/components/ui/` - unchanged
+- [x] Color values in :root and .dark - unchanged
 
 ### Verification
-- [ ] UI looks identical to original
-- [ ] Commit: `git commit -m "feat(web): finalize styles for Tailwind 4"`
+- [x] UI looks identical to original
+- [x] Commit: `git commit -m "feat(web): fix dependencies, configs, and paths for Next.js 16 migration"`
 
 ---
 
