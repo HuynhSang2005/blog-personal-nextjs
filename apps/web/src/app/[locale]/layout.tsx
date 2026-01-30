@@ -6,6 +6,7 @@ import '@/styles/globals.css'
 
 import { getObjectValueByLocale } from '@/lib/core/utils/locale'
 import type { LocaleOptions } from '@/lib/core/types/i18n'
+import { QueryProvider } from '@/lib/providers/query-provider'
 import { ThemeProvider } from '@/components/theme-provider'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
@@ -125,29 +126,31 @@ export default async function RootLayout(props: {
           fontSans.variable
         )}
       >
-        <NextIntlClientProvider
-          locale={params.locale || defaultLocale}
-          messages={{}}
-        >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            disableTransitionOnChange
-            enableSystem
+        <QueryProvider>
+          <NextIntlClientProvider
+            locale={params.locale || defaultLocale}
+            messages={{}}
           >
-            <div>
-              <div className="relative z-10 flex min-h-screen flex-col">
-                <SiteHeader />
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              disableTransitionOnChange
+              enableSystem
+            >
+              <div>
+                <div className="relative z-10 flex min-h-screen flex-col">
+                  <SiteHeader />
 
-                <main className="flex-1">{children}</main>
+                  <main className="flex-1">{children}</main>
 
-                <SiteFooter />
+                  <SiteFooter />
+                </div>
+
+                <div className="fixed left-0 top-0 size-full bg-gradient-to-b from-[#a277ff] via-transparent to-transparent opacity-10" />
               </div>
-
-              <div className="fixed left-0 top-0 size-full bg-gradient-to-b from-[#a277ff] via-transparent to-transparent opacity-10" />
-            </div>
-          </ThemeProvider>
-        </NextIntlClientProvider>
+            </ThemeProvider>
+          </NextIntlClientProvider>
+        </QueryProvider>
       </body>
     </html>
   )

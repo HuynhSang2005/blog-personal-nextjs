@@ -47,25 +47,25 @@
 
 ---
 
-## Phase 2: Content Collections (Est: 30 min)
+## Phase 2: Content Collections (Est: 30 min) ✅ COMPLETED
 
 **File: [2026-01-30-phase2-content-collections.md](./2026-01-30-phase2-content-collections.md)**
 
 ### Setup
-- [ ] Create `apps/web/content-collections.ts`
-- [ ] Update `apps/web/next.config.ts` with withContentCollections
-- [ ] Update `apps/web/tsconfig.json` with content-collections path
-- [ ] Create type definitions at `src/lib/core/types/content.ts`
+- [x] Create `apps/web/content-collections.ts` (with z.object schema syntax)
+- [x] Update `apps/web/next.config.ts` with withContentCollections
+- [x] Update `apps/web/tsconfig.json` with content-collections path
+- [x] Content Collections generates types at `.content-collections/generated`
 
 ### Migration
-- [ ] Update all imports from `contentlayer/generated` to `content-collections`
-- [ ] Update MDX rendering from useMDXComponent to MDXContent
-- [ ] Delete `apps/web/contentlayer.config.ts`
+- [x] Update all 19 imports from `contentlayer/generated` to `content-collections`
+- [x] Update MDX rendering from useMDXComponent to MDXContent
+- [x] Delete `apps/web/contentlayer.config.ts`
 
 ### Verification
-- [ ] Run `bun run dev` - content generates
-- [ ] Check `.content-collections/generated` folder exists
-- [ ] Commit: `git commit -m "feat(web): migrate to content-collections"`
+- [x] Run `bun run dev` - content generates (2 collections, 9 documents)
+- [x] Check `.content-collections/generated` folder exists
+- [x] Commit: `git commit -m "feat(web): migrate to content-collections"`
 
 ---
 
