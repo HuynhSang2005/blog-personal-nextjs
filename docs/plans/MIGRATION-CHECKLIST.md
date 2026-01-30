@@ -140,34 +140,34 @@
 
 ---
 
-## Phase 6: Verification (Est: 30 min)
+## Phase 6: Verification (Est: 30 min) ✅ COMPLETED
 
 **File: [2026-01-30-phase6-verification.md](./2026-01-30-phase6-verification.md)**
 
 ### Build
-- [ ] `bun run tsc` - no errors
-- [ ] `bun run build` - successful
-- [ ] `bun run dev` - server starts
+- [x] `bun run tsc` - no errors (after installing missing dependencies)
+- [x] `bun run build` - successful (18 pages generated)
+- [x] `bun run dev` - server starts
 
 ### Pages
-- [ ] Landing page (http://localhost:3000/vi)
-- [ ] Docs index (http://localhost:3000/vi/docs)
-- [ ] Docs page with code (http://localhost:3000/vi/docs/mdx/code)
-- [ ] Blog index (http://localhost:3000/vi/blog)
-- [ ] Blog post (http://localhost:3000/vi/blog/gioi-thieu-blog)
-- [ ] RSS XML feed (http://localhost:3000/vi/feed/blog.xml)
-- [ ] RSS JSON feed (http://localhost:3000/vi/feed/blog.json)
+- [x] Landing page (http://localhost:3000/vi) - FlipWords animation, i18n working
+- [x] Docs index (http://localhost:3000/vi/docs) - Sidebar, TOC, MDX rendering
+- [x] Docs page with code (http://localhost:3000/vi/docs/mdx/code) - Syntax highlighting working
+- [x] Blog index (http://localhost:3000/vi/blog) - Pagination, tags, author info
+- [x] Blog post (http://localhost:3000/vi/blog/gioi-thieu-blog) - Full content rendering
+- [x] RSS XML feed (http://localhost:3000/vi/feed/blog.xml) - Valid XML output
+- [x] RSS JSON feed (http://localhost:3000/vi/feed/blog.json) - Valid JSON output
 
 ### Features
-- [ ] Theme toggle (dark/light) works
-- [ ] Sidebar navigation works
-- [ ] Command menu (Ctrl+K) works
-- [ ] Mobile responsive works
+- [x] Theme toggle (dark/light) works
+- [x] Sidebar navigation works
+- [x] Command menu (Ctrl+K) works
+- [x] Mobile responsive works (drawer navigation)
 
 ### Final
-- [ ] Production build works
-- [ ] No console errors
-- [ ] Commit: `git commit -m "feat(web): migration complete"`
+- [x] Production build works (`next build` + `next start`)
+- [x] No console errors
+- [x] Commit: pending
 
 ---
 
