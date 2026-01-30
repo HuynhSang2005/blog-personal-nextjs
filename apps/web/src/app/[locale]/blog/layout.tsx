@@ -9,8 +9,6 @@ interface BlogLayoutProps {
   }>
 }
 
-export const dynamicParams = true
-
 export default async function BlogLayout(props: {
   children: React.ReactNode
   params: Promise<{ locale: string }>

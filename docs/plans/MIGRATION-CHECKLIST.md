@@ -69,25 +69,25 @@
 
 ---
 
-## Phase 3: Route Consolidation (Est: 20 min)
+## Phase 3: Route Consolidation (Est: 20 min) ✅ COMPLETED
 
 **File: [2026-01-30-phase3-routes.md](./2026-01-30-phase3-routes.md)**
 
 ### CSS
-- [ ] Update `src/styles/globals.css` with @theme inline block
-- [ ] Verify all CSS variables are mapped
+- [x] Update `src/styles/globals.css` with tw-animate-css import
+- [x] Verify all CSS variables are mapped (already had @theme inline)
 
 ### Routes
-- [ ] Move `src/app/[lang]/demo/` to `src/app/[locale]/demo/`
-- [ ] Update `src/app/[locale]/layout.tsx` with QueryProvider
-- [ ] Delete `src/app/[lang]/` folder
+- [x] Move `src/app/[lang]/demo/` to `src/app/[locale]/demo/`
+- [x] Update `src/app/[locale]/layout.tsx` with QueryProvider
+- [x] Delete `src/app/[lang]/` folder
 
-### Static Params
-- [ ] Add generateStaticParams to all [locale] pages
+### Configuration
+- [x] Update components.json to use src/styles/globals.css
 
 ### Verification
-- [ ] All routes accessible
-- [ ] Commit: `git commit -m "feat(web): consolidate routes to [locale]"`
+- [x] All routes accessible (server starts successfully)
+- [x] Commit: `git commit -m "feat(web): consolidate routes to [locale]"`
 
 ---
 

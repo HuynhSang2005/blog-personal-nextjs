@@ -52,6 +52,9 @@
 }
 
 @theme inline {
+  /* ============================================
+     Color Mappings for Tailwind 4
+     ============================================ */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -73,12 +76,25 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  
+  /* ============================================
+     Radius Mappings
+     ============================================ */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  
+  /* ============================================
+     Font Mappings (Geist Sans & Mono)
+     ============================================ */
+  --font-sans: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+  --font-mono: var(--font-mono, ui-monospace, monospace);
 }
 
+/* ============================================
+   BASE LAYER - Essential Styles
+   ============================================ */
 @layer base {
   * {
     @apply border-border;
@@ -96,6 +112,9 @@
   }
 }
 
+/* ============================================
+   CUSTOM UTILITIES
+   ============================================ */
 @utility step {
   counter-increment: step;
 }
@@ -106,6 +125,9 @@
   @apply ml-[-50px] mt-[-4px];
 }
 
+/* ============================================
+   ANIMATIONS - Accordion
+   ============================================ */
 @keyframes accordion-down {
   from {
     height: 0;

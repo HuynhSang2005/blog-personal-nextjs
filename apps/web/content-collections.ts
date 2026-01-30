@@ -111,14 +111,16 @@ const docs = defineCollection({
       ],
     });
 
-    // Generate slug from file path
-    const pathParts = doc._meta.path.split("/");
-    const slugAsParams = pathParts.slice(1).join("/");
+    // Generate slug from file path (normalize Windows backslashes to forward slashes)
+    const normalizedPath = doc._meta.path.replace(/\\/g, "/");
+    // Remove "index" from path if it's the last segment (for index pages)
+    const cleanPath = normalizedPath.replace(/\/index$/, "").replace(/^index$/, "");
+    const slugAsParams = cleanPath || normalizedPath.split("/")[0]; // Fallback to locale for root index
 
     return {
       ...doc,
       mdx,
-      slug: `/${doc._meta.path}`,
+      slug: cleanPath ? `/${cleanPath}` : `/${normalizedPath.split("/")[0]}`,
       slugAsParams,
       // Compatibility with old Contentlayer structure
       _id: doc._meta.filePath,
@@ -126,7 +128,7 @@ const docs = defineCollection({
         sourceFilePath: doc._meta.filePath,
         sourceFileName: doc._meta.fileName,
         sourceFileDir: doc._meta.directory,
-        flattenedPath: doc._meta.path,
+        flattenedPath: normalizedPath,
         contentType: "mdx" as const,
       },
       body: {
@@ -238,9 +240,10 @@ const blogs = defineCollection({
       ],
     });
 
-    // Generate slug from file path
-    const pathParts = doc._meta.path.split("/");
-    const slugAsParams = pathParts.slice(1).join("/");
+    // Generate slug from file path (normalize Windows backslashes to forward slashes)
+    const normalizedPath = doc._meta.path.replace(/\\/g, "/");
+    const pathParts = normalizedPath.split("/");
+    const slugAsParams = pathParts.join("/");
 
     // Calculate read time
     const wordsPerMinute = 200;
@@ -248,7 +251,8 @@ const blogs = defineCollection({
     const readTimeInMinutes = Math.ceil(numberOfWords / wordsPerMinute);
 
     // Get author info
-    const [, locale] = doc._meta.directory.split("/");
+    const normalizedDir = doc._meta.directory.replace(/\\/g, "/");
+    const [, locale] = normalizedDir.split("/");
     const authorData = blogConfig.authors.find(
       (author) => author.id === doc.author_id
     );
@@ -266,7 +270,7 @@ const blogs = defineCollection({
     return {
       ...doc,
       mdx,
-      slug: `/${doc._meta.path}`,
+      slug: `/${normalizedPath}`,
       slugAsParams,
       readTimeInMinutes,
       author,
@@ -276,7 +280,7 @@ const blogs = defineCollection({
         sourceFilePath: doc._meta.filePath,
         sourceFileName: doc._meta.fileName,
         sourceFileDir: doc._meta.directory,
-        flattenedPath: doc._meta.path,
+        flattenedPath: normalizedPath,
         contentType: "mdx" as const,
       },
       body: {

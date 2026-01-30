@@ -9,7 +9,6 @@ import { siteConfig } from '@/config/site'
 import { getFonts } from '@/lib/fonts'
 
 export const runtime = 'edge'
-export const dynamicParams = true
 
 interface BlogOgProps {
   params: Promise<{ slug: string; locale: LocaleOptions }>

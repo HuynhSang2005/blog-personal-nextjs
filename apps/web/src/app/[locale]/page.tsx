@@ -20,8 +20,6 @@ import { Link } from '@/navigation'
 import { cn } from '@/lib/utils'
 import { defaultLocale, locales } from '@/config/i18n'
 
-export const dynamicParams = true
-
 export default async function IndexPage(props: {
   params: Promise<{ locale: LocaleOptions }>
 }) {

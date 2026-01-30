@@ -20,8 +20,6 @@ import { Mdx } from '@/components/docs/mdx'
 import { siteConfig } from '@/config/site'
 import { absoluteUrl } from '@/lib/utils'
 
-export const dynamicParams = true
-
 export async function generateMetadata(props: {
   params: Promise<DocPageProps['params']>
 }): Promise<Metadata> {

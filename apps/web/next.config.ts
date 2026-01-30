@@ -1,11 +1,15 @@
 import type { NextConfig } from "next";
 import { withContentCollections } from "@content-collections/next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   // Enable Turbopack by default (stable in Next.js 16)
 
-  // Cache Components - explicit caching model for Next.js 16
-  cacheComponents: true,
+  // Cache Components - temporarily disabled for migration
+  // TODO: Enable with proper Suspense boundaries after migration is complete
+  // cacheComponents: true,
 
   // React Compiler (stable in Next.js 16)
   reactCompiler: true,
@@ -26,4 +30,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withContentCollections(nextConfig);
+export default withContentCollections(withNextIntl(nextConfig));

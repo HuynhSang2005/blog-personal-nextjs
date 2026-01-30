@@ -12,8 +12,6 @@ interface DocsLayoutProps {
   }>
 }
 
-export const dynamicParams = true
-
 export default async function DocsLayout(props: {
   children: React.ReactNode
   params: Promise<{ locale: string }>

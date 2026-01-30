@@ -138,8 +138,3 @@ export const GET = async (
     },
   })
 }
-
-export const dynamicParams = true
-export const dynamic = 'force-static'
-
-export const revalidate = 300

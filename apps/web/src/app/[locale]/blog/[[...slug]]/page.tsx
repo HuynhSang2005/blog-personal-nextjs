@@ -28,8 +28,6 @@ interface BlogPageProps {
   }>
 }
 
-export const dynamicParams = true
-
 export async function generateMetadata(
   props: BlogPageProps
 ): Promise<Metadata> {

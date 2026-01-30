@@ -10,10 +10,14 @@ import { QueryProvider } from '@/lib/providers/query-provider'
 import { ThemeProvider } from '@/components/theme-provider'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
-import { defaultLocale } from '@/config/i18n'
+import { defaultLocale, locales } from '@/config/i18n'
 import { siteConfig } from '@/config/site'
 import { getSansFont } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
+
+export function generateStaticParams() {
+  return locales.map(locale => ({ locale }))
+}
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
@@ -91,8 +95,6 @@ export async function generateMetadata(props: {
     manifest: '/manifest.webmanifest',
   }
 }
-
-export const dynamicParams = true
 
 export const viewport: Viewport = {
   themeColor: [

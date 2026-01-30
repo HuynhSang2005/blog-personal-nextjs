@@ -55,7 +55,6 @@ function rehypeNpmCommand() {
 }
 
 // src/lib/core/utils/code-theme.ts
-import { createHighlighter } from "shiki";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
@@ -73,7 +72,6 @@ function toKebabCase(text) {
 }
 
 // src/lib/core/utils/code-theme.ts
-var localThemes = codeThemeConfig.localThemes;
 function getContentLayerCodeTheme() {
   const themeName = codeThemeConfig.theme;
   if (localCodeThemes.includes(themeName)) {
@@ -217,12 +215,13 @@ var docs = defineCollection({
         ]
       ]
     });
-    const pathParts = doc._meta.path.split("/");
-    const slugAsParams = pathParts.slice(1).join("/");
+    const normalizedPath = doc._meta.path.replace(/\\/g, "/");
+    const cleanPath = normalizedPath.replace(/\/index$/, "").replace(/^index$/, "");
+    const slugAsParams = cleanPath || normalizedPath.split("/")[0];
     return {
       ...doc,
       mdx,
-      slug: `/${doc._meta.path}`,
+      slug: cleanPath ? `/${cleanPath}` : `/${normalizedPath.split("/")[0]}`,
       slugAsParams,
       // Compatibility with old Contentlayer structure
       _id: doc._meta.filePath,
@@ -230,7 +229,7 @@ var docs = defineCollection({
         sourceFilePath: doc._meta.filePath,
         sourceFileName: doc._meta.fileName,
         sourceFileDir: doc._meta.directory,
-        flattenedPath: doc._meta.path,
+        flattenedPath: normalizedPath,
         contentType: "mdx"
       },
       body: {
@@ -324,12 +323,14 @@ var blogs = defineCollection({
         ]
       ]
     });
-    const pathParts = doc._meta.path.split("/");
-    const slugAsParams = pathParts.slice(1).join("/");
+    const normalizedPath = doc._meta.path.replace(/\\/g, "/");
+    const pathParts = normalizedPath.split("/");
+    const slugAsParams = pathParts.join("/");
     const wordsPerMinute = 200;
     const numberOfWords = doc.content.trim().split(/\s+/).length;
     const readTimeInMinutes = Math.ceil(numberOfWords / wordsPerMinute);
-    const [, locale] = doc._meta.directory.split("/");
+    const normalizedDir = doc._meta.directory.replace(/\\/g, "/");
+    const [, locale] = normalizedDir.split("/");
     const authorData = blogConfig.authors.find(
       (author2) => author2.id === doc.author_id
     );
@@ -340,7 +341,7 @@ var blogs = defineCollection({
     return {
       ...doc,
       mdx,
-      slug: `/${doc._meta.path}`,
+      slug: `/${normalizedPath}`,
       slugAsParams,
       readTimeInMinutes,
       author,
@@ -350,7 +351,7 @@ var blogs = defineCollection({
         sourceFilePath: doc._meta.filePath,
         sourceFileName: doc._meta.fileName,
         sourceFileDir: doc._meta.directory,
-        flattenedPath: doc._meta.path,
+        flattenedPath: normalizedPath,
         contentType: "mdx"
       },
       body: {
