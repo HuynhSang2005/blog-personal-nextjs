@@ -13,7 +13,7 @@ import {
 import type { LocaleOptions } from '@/lib/core/types/i18n'
 import { cn, formatDate, truncateText } from '@/lib/utils'
 import { BlogPostItemTags } from './post-item-tags'
-import type { Blog } from 'contentlayer/generated'
+import type { Blog } from 'content-collections'
 import { buttonVariants } from '../ui/button'
 import { dateLocales } from '@/config/i18n'
 import { Pagination } from './pagination'

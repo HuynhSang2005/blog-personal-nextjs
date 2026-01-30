@@ -27,11 +27,17 @@
       "@/lib/*": ["./src/lib/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@blog/i18n": ["../i18n/src/index.ts"],
-      "@blog/config": ["../config/biome/biome.json"]
+      "@blog/config": ["../config/biome/biome.json"],
+      "content-collections": ["./.content-collections/generated"]
     },
     "allowJs": true,
     "incremental": true
   },
-  "include": ["src/**/*", ".next/types/**/*.ts", ".next/dev/types/**/*.ts"],
+  "include": [
+    "src/**/*",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    ".content-collections/generated/**/*"
+  ],
   "exclude": ["node_modules"]
 }

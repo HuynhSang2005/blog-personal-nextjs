@@ -1,6 +1,6 @@
 'use client'
 
-import type { Blog } from 'contentlayer/generated'
+import type { Blog } from 'content-collections'
 import { useSearchParams } from 'next/navigation'
 
 import { PaginationEllipsis } from '../ui/pagination'

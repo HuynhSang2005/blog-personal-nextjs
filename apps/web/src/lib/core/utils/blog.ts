@@ -1,4 +1,4 @@
-import { allBlogs, type Blog } from 'contentlayer/generated'
+import { allBlogs, type Blog } from 'content-collections'
 import type { BlogPageProps } from '../types/blog'
 import { defaultLocale } from '@/config/i18n'
 

@@ -1,5 +1,5 @@
 import type { NavItem, SidebarNavItem } from '../types/nav'
-import { allDocs, type Doc } from 'contentlayer/generated'
+import { allDocs, type Doc } from 'content-collections'
 import type { DocPageProps } from '../types/docs'
 import { getSlugWithoutLocale } from './locale'
 import { defaultLocale } from '@/config/i18n'

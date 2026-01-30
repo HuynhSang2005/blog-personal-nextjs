@@ -4,7 +4,7 @@ import { Fragment } from 'react'
 import { getObjectValueByLocale } from '@/lib/core/utils/locale'
 import type { LocaleOptions } from '@/lib/core/types/i18n'
 import { getBreadcrumb } from '@/lib/core/utils/doc'
-import type { Doc } from 'contentlayer/generated'
+import type { Doc } from 'content-collections'
 import { defaultLocale } from '@/config/i18n'
 import { Link } from '@/navigation'
 

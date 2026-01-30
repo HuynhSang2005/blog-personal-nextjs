@@ -19,7 +19,7 @@ import { useBlogConfig } from '@/lib/core/hooks/use-blog-config'
 import { useDocsConfig } from '@/lib/core/hooks/use-docs-config'
 import { getObjectValueByLocale } from '@/lib/core/utils/locale'
 import type { NavItemWithChildren } from '@/lib/core/types/nav'
-import { allBlogs } from 'contentlayer/generated'
+import { allBlogs } from 'content-collections'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 

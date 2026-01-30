@@ -1,6 +1,6 @@
 'use client'
 
-import { useMDXComponent } from 'next-contentlayer2/hooks'
+import { MDXContent } from '@content-collections/mdx/react'
 import type { ComponentProps } from 'react'
 import Image from 'next/image'
 
@@ -157,11 +157,9 @@ interface MdxProps {
 }
 
 export function Mdx({ code }: MdxProps) {
-  const Component = useMDXComponent(code)
-
   return (
     <div className="mdx">
-      <Component components={components} />
+      <MDXContent code={code} components={components} />
     </div>
   )
 }

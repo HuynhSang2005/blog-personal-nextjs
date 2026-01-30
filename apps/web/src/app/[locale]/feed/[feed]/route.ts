@@ -4,7 +4,7 @@ import { cache } from 'react'
 
 import { getObjectValueByLocale } from '@/lib/core/utils/locale'
 import type { LocaleOptions } from '@/lib/core/types/i18n'
-import { allBlogs, type Blog } from 'contentlayer/generated'
+import { allBlogs, type Blog } from 'content-collections'
 import type { RSSFeed } from '@/lib/core/types/blog'
 import { defaultLocale, locales } from '@/config/i18n'
 import { blogConfig } from '@/config/blog'

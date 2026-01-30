@@ -1,5 +1,5 @@
 import { LinkedInLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
-import type { Blog } from 'contentlayer/generated'
+import type { Blog } from 'content-collections'
 import { Globe, Mail } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'

@@ -1,5 +1,5 @@
 /** biome-ignore-all lint/performance/noImgElement: Using img elements for OG image generation */
-import { allBlogs, type Blog } from 'contentlayer/generated'
+import { allBlogs, type Blog } from 'content-collections'
 import type { NextRequest } from 'next/server'
 import { ImageResponse } from 'next/og'
 

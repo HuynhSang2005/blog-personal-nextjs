@@ -2,7 +2,7 @@ import Balancer from 'react-wrap-balancer'
 
 import { DocNotAvailableInThisLanguage } from './not-available'
 import type { LocaleOptions } from '@/lib/core/types/i18n'
-import type { Doc } from 'contentlayer/generated'
+import type { Doc } from 'content-collections'
 
 interface DocHeadingProps {
   doc: Doc & { notAvailable: boolean }

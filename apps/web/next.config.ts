@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withContentCollections } from "@content-collections/next";
 
 const nextConfig: NextConfig = {
   // Enable Turbopack by default (stable in Next.js 16)
@@ -25,4 +26,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withContentCollections(nextConfig);

@@ -1,4 +1,4 @@
-import { allBlogs, allDocs } from 'contentlayer/generated'
+import { allBlogs, allDocs } from 'content-collections'
 import type { MetadataRoute } from 'next'
 
 import { locales } from '@/config/i18n'

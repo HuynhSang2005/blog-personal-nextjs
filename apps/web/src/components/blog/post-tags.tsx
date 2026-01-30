@@ -1,4 +1,4 @@
-import type { Blog } from 'contentlayer/generated'
+import type { Blog } from 'content-collections'
 import { badgeVariants } from '../ui/badge'
 import { Link } from '@/navigation'
 import { cn } from '@/lib/utils'
