@@ -45,9 +45,10 @@ Based on feedback:
 ### Step 5: Complete Development
 
 After all tasks complete and verified:
-- Announce: "I'm using the finishing-a-development-branch skill to complete this work."
-- **REQUIRED SUB-SKILL:** Use superpowers:finishing-a-development-branch
-- Follow that skill to verify tests, present options, execute choice
+- Announce: "Development complete. Running final verification."
+- Run all tests to ensure everything passes
+- Create a summary of completed tasks
+- Follow project conventions for finalizing the branch (PR, merge, etc.)
 
 ## When to Stop and Ask for Help
 

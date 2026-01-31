@@ -4,7 +4,6 @@ description: |
   Build type-safe validated forms using React Hook Form v7 and Zod v4. Single schema works on client and server with full TypeScript inference via z.infer.
 
   Use when building forms, multi-step wizards, or fixing uncontrolled warnings, resolver errors, useFieldArray issues, performance problems with large forms.
-user-invocable: true
 ---
 
 # React Hook Form + Zod Validation
